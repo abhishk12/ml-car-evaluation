@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+</head>
+<body>
+    <div class = "login">
+        <h1>Predict Class of a Car</h1>
+        <form  action =" {{ url_for('predict')}}"  method = "POST">
+
+            Buying Price : <input type = 'number' name = 'Buying Price' placeholder="Enter Price (0-3)" required="required"/>
+            <br>
+            <br>
+            Maintenance : <input type = 'number' name = 'Maintenance' placeholder="Enter Maintenance (0-3)" required="required"/>
+            <br>
+            <br>
+            Number of doors : <input type = 'number' name = 'Number of doors' placeholder="Enter Number of Doors (0-3)" required="required"/>
+            <br>
+            <br>
+            Total number of persons to carry : <input type = 'number' name = 'Total number of persons to carry' placeholder="Enter in range (0-2)" required="required"/>
+            <br>
+            <br>
+            Size of luggage boot : <input type = 'number' name = 'Size of luggage boot' placeholder="Enter in range(0-2)" required="required"/>
+            <br>
+            <br>
+
+            Estimated Safety of car : <input type = 'number' name = 'Estimated Safety of car' placeholder="Enter in range (0-3)" required="required"/>
+            <br>
+            <br>
+            <button type = 'submit' class = "btn btn-primary btn-block btn-large">Predict Class</button>
+
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
